@@ -480,7 +480,6 @@ class Config extends PMConfig
                 }
             }
             if (strlen($file_content[$key_1]) === $lenFirstKey){
-                var_dump("Hello");
                 unset($file_content[$key_1]);
             }
         }
@@ -528,7 +527,6 @@ class Config extends PMConfig
                 }
             }
             if (strlen($file_content[$key . "." . $key_1]) === $lenFirstKey){
-                var_dump("Hello2");
                 unset($file_content[$key . "." . $key_1]);
             }
         }
