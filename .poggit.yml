@@ -2,8 +2,7 @@
 branches:
   - master
 projects:
-  libPath:
-    path: ""
+  libExtraPathConfig:
     type: library
     model: virion
 ...
