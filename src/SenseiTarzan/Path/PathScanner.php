@@ -4,6 +4,7 @@ namespace SenseiTarzan\Path;
 
 use Generator;
 use Symfony\Component\Filesystem\Path;
+
 class PathScanner
 {
 
