@@ -60,7 +60,7 @@ class Config extends PMConfig
     private int $type = self::DETECT;
 
 
-    public static $formats = [
+    public static array $formats = [
         "properties" => self::PROPERTIES,
         "cnf" => self::CNF,
         "conf" => self::CNF,
@@ -207,7 +207,7 @@ class Config extends PMConfig
      * @param string $key
      * @param mixed $value
      */
-    public function setNested($key, mixed $value): void
+    public function setNested(string $key, mixed $value): void
     {
         if ($this->type === Config::INI) {
             $key = preg_replace('/[?\-{}\-|\-&\-~\-!\-[\-(\-)\-^\-§\- ]/', '', $key);
@@ -240,7 +240,7 @@ class Config extends PMConfig
      *
      * @return mixed
      */
-    public function getNested($key, mixed $default = null): mixed
+    public function getNested(string $key, mixed $default = null): mixed
     {
         if ($this->type === Config::INI) {
             $key = preg_replace('/[?\-{}\-|\-&\-~\-!\-[\-(\-)\-^\-§\- ]/', '', $key);
@@ -300,7 +300,7 @@ class Config extends PMConfig
      *
      * @return bool|mixed
      */
-    public function get($k, $default = false)
+    public function get($k, $default = false): mixed
     {
         if ($this->type === Config::INI) {
             $k = preg_replace('/[?\-{}\-|\-&\-~\-!\-[\-(\-)\-^\-§\- ]/', '', $k);
