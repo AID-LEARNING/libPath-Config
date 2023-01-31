@@ -539,7 +539,7 @@ class Config extends PMConfig
             true => "true",
             false => "false",
             null => "null",
-            default => is_string($value) ? '"' . str_replace(["\n", "(", ')'], ['\n', ''], $value) . '"' : $value
+            default => is_string($value) ? '"' . str_replace(["\n"], ['\n'], $value) . '"' : $value
         };
     }
 
