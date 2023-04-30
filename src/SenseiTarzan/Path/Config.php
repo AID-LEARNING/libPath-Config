@@ -350,6 +350,11 @@ class Config extends PMConfig
         return ($keys ? array_keys($this->config) : $this->config);
     }
 
+    public function setAll(array $data) : void{
+        $this->config = $data;
+        $this->setChanged();
+    }
+
 
     /**
      * @param mixed[] $default
